@@ -1,0 +1,233 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 500 500">
+    <defs>
+        <radialGradient id="gA" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#1a3a6e" stop-opacity="0.18" />
+            <stop offset="100%" stop-color="#1a3a6e" stop-opacity="0" />
+        </radialGradient>
+        <radialGradient id="gB" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#d4af37" stop-opacity="0.12" />
+            <stop offset="100%" stop-color="#d4af37" stop-opacity="0" />
+        </radialGradient>
+        <radialGradient id="gC" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#2e5fa3" stop-opacity="0.14" />
+            <stop offset="100%" stop-color="#2e5fa3" stop-opacity="0" />
+        </radialGradient>
+        <linearGradient id="axisGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#2e5fa3" stop-opacity="0.15" />
+            <stop offset="50%" stop-color="#2e5fa3" stop-opacity="0.55" />
+            <stop offset="100%" stop-color="#2e5fa3" stop-opacity="0.15" />
+        </linearGradient>
+        <linearGradient id="axisGradV" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#2e5fa3" stop-opacity="0.15" />
+            <stop offset="50%" stop-color="#2e5fa3" stop-opacity="0.55" />
+            <stop offset="100%" stop-color="#2e5fa3" stop-opacity="0.15" />
+        </linearGradient>
+    </defs>
+
+    <rect width="500" height="500" fill="#eef1f9" />
+
+    <circle cx="90" cy="110" r="160" fill="url(#gA)">
+        <animate attributeName="r" values="140;175;140" dur="9s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="420" cy="200" r="180" fill="url(#gB)">
+        <animate attributeName="r" values="160;195;160" dur="10s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="240" cy="430" r="190" fill="url(#gC)">
+        <animate attributeName="r" values="170;205;170" dur="11s" repeatCount="indefinite" />
+    </circle>
+
+    <g stroke="#b0bcd8" stroke-width="0.5" opacity="0.35">
+        <line x1="0" y1="100" x2="500" y2="100" />
+        <line x1="0" y1="200" x2="500" y2="200" />
+        <line x1="0" y1="300" x2="500" y2="300" />
+        <line x1="0" y1="400" x2="500" y2="400" />
+        <line x1="100" y1="0" x2="100" y2="500" />
+        <line x1="200" y1="0" x2="200" y2="500" />
+        <line x1="300" y1="0" x2="300" y2="500" />
+        <line x1="400" y1="0" x2="400" y2="500" />
+    </g>
+
+    <line x1="0" y1="310" x2="500" y2="310" stroke="url(#axisGrad)" stroke-width="1.5" />
+    <line x1="80" y1="0" x2="80" y2="500" stroke="url(#axisGradV)" stroke-width="1.5" />
+    <polygon points="500,310 490,305 490,315" fill="#2e5fa3" opacity="0.55" />
+    <polygon points="80,0 75,12 85,12" fill="#2e5fa3" opacity="0.55" />
+
+    <path
+        d="M0 310
+    C 20 310 30 240 60 240
+    C 90 240 100 370 130 370
+    C 160 370 170 240 200 240
+    C 230 240 240 370 270 370
+    C 300 370 310 240 340 240
+    C 370 240 380 370 410 370
+    C 440 370 450 240 480 240
+    L500 240"
+        stroke="#2e5fa3" stroke-width="1.8" fill="none" opacity="0.45"
+        stroke-dasharray="6 3">
+        <animate attributeName="stroke-dashoffset" values="0;-18;0" dur="4s"
+            repeatCount="indefinite" />
+    </path>
+
+    <path
+        d="M0 310
+    C 20 310 30 240 60 240
+    C 90 240 100 370 130 370
+    C 160 370 170 240 200 240
+    C 230 240 240 370 270 370
+    C 300 370 310 240 340 240
+    C 370 240 380 370 410 370
+    C 440 370 450 240 480 240
+    L500 240 L500 310 Z"
+        fill="#2e5fa3" opacity="0.05" />
+
+    <g font-family="Georgia, 'Times New Roman', serif" fill="#1a3a6e">
+        <g transform="translate(48 75)">
+            <g>
+                <animateTransform attributeName="transform" type="translate" values="0 0;0 -10;0 0"
+                    dur="7s" repeatCount="indefinite" />
+                <text font-size="52" font-style="italic" fill="#2e5fa3" opacity="0.82">∫</text>
+            </g>
+        </g>
+        <g transform="translate(245 178)">
+            <g>
+                <animateTransform attributeName="transform" type="translate" values="0 0;0 -9;0 0"
+                    dur="8s" repeatCount="indefinite" />
+                <text font-size="34" fill="#1a3a6e" opacity="0.72">π²</text>
+            </g>
+        </g>
+        <g transform="translate(115 322)">
+            <g>
+                <animateTransform attributeName="transform" type="translate" values="0 0;0 -8;0 0"
+                    dur="6s" repeatCount="indefinite" />
+                <text font-size="44" fill="#2e5fa3" opacity="0.68">∑</text>
+            </g>
+        </g>
+        <g transform="translate(348 278)">
+            <g>
+                <animateTransform attributeName="transform" type="translate" values="0 0;0 -11;0 0"
+                    dur="9s" repeatCount="indefinite" />
+                <text font-size="26" font-style="italic" fill="#1a3a6e" opacity="0.65">f(x)</text>
+            </g>
+        </g>
+        <g transform="translate(408 98)">
+            <g>
+                <animateTransform attributeName="transform" type="translate" values="0 0;0 -9;0 0"
+                    dur="7.5s" repeatCount="indefinite" />
+                <text font-size="32" fill="#2e5fa3" opacity="0.70">√2</text>
+            </g>
+        </g>
+        <g transform="translate(22 220)">
+            <g>
+                <animateTransform attributeName="transform" type="translate" values="0 0;0 -7;0 0"
+                    dur="6.5s" repeatCount="indefinite" />
+                <text font-size="38" fill="#1a3a6e" opacity="0.62">∞</text>
+            </g>
+        </g>
+        <g transform="translate(218 55)">
+            <g>
+                <animateTransform attributeName="transform" type="translate" values="0 0;0 -10;0 0"
+                    dur="8.5s" repeatCount="indefinite" />
+                <text font-size="36" font-style="italic" fill="#2e5fa3" opacity="0.65">θ</text>
+            </g>
+        </g>
+        <g transform="translate(325 172)">
+            <g>
+                <animateTransform attributeName="transform" type="translate" values="0 0;0 -8;0 0"
+                    dur="7s" repeatCount="indefinite" />
+                <text font-size="30" fill="#1a3a6e" opacity="0.55">≈</text>
+            </g>
+        </g>
+        <g transform="translate(55 430)">
+            <g>
+                <animateTransform attributeName="transform" type="translate" values="0 0;0 -9;0 0"
+                    dur="6s" repeatCount="indefinite" />
+                <text font-size="28" fill="#2e5fa3" opacity="0.60">△</text>
+            </g>
+        </g>
+        <g transform="translate(175 442)">
+            <g>
+                <animateTransform attributeName="transform" type="translate" values="0 0;0 -8;0 0"
+                    dur="7.2s" repeatCount="indefinite" />
+                <text font-size="24" font-style="italic" fill="#1a3a6e" opacity="0.58">dx</text>
+            </g>
+        </g>
+        <g transform="translate(428 322)">
+            <g>
+                <animateTransform attributeName="transform" type="translate" values="0 0;0 -10;0 0"
+                    dur="8s" repeatCount="indefinite" />
+                <text font-size="28" fill="#d4af37" opacity="0.75">★</text>
+            </g>
+        </g>
+        <g transform="translate(280 75)">
+            <g>
+                <animateTransform attributeName="transform" type="translate" values="0 0;0 -7;0 0"
+                    dur="6.8s" repeatCount="indefinite" />
+                <text font-size="28" font-style="italic" fill="#2e5fa3" opacity="0.60">α</text>
+            </g>
+        </g>
+    </g>
+
+    <g fill="none">
+        <g transform="translate(395 370)">
+            <g>
+                <animateTransform attributeName="transform" type="translate"
+                    values="0 0;-12 -16;0 0" dur="13s" repeatCount="indefinite" />
+                <circle cx="0" cy="0" r="20" stroke="#2e5fa3" stroke-width="1.2" fill="#2e5fa3"
+                    fill-opacity="0.08" />
+                <line x1="-20" y1="0" x2="20" y2="0" stroke="#1a3a6e" stroke-width="0.8"
+                    opacity="0.5" />
+                <line x1="0" y1="-20" x2="0" y2="20" stroke="#1a3a6e" stroke-width="0.8"
+                    opacity="0.5" />
+            </g>
+        </g>
+        <g transform="translate(118 245)">
+            <g>
+                <animateTransform attributeName="transform" type="translate" values="0 0;13 -13;0 0"
+                    dur="15s" repeatCount="indefinite" />
+                <polygon points="0,-18 16,9 -16,9" stroke="#d4af37" stroke-width="1.2"
+                    fill="#d4af37" fill-opacity="0.10" />
+            </g>
+        </g>
+        <g transform="translate(448 398)">
+            <g>
+                <animateTransform attributeName="transform" type="translate" values="0 0;-9 -12;0 0"
+                    dur="12s" repeatCount="indefinite" />
+                <rect x="-13" y="-13" width="26" height="26" stroke="#2e5fa3" stroke-width="1.2"
+                    fill="#2e5fa3" fill-opacity="0.08" rx="2" />
+            </g>
+        </g>
+    </g>
+
+    <g fill="#2e5fa3">
+        <circle cx="157" cy="175" r="2.5" opacity="0.45">
+            <animate attributeName="opacity" values="0.2;0.6;0.2" dur="4s" repeatCount="indefinite" />
+        </circle>
+        <circle cx="315" cy="105" r="3" opacity="0.40">
+            <animate attributeName="opacity" values="0.2;0.55;0.2" dur="4.5s"
+                repeatCount="indefinite" />
+        </circle>
+        <circle cx="408" cy="272" r="2.5" opacity="0.45">
+            <animate attributeName="opacity" values="0.2;0.6;0.2" dur="3.8s"
+                repeatCount="indefinite" />
+        </circle>
+        <circle cx="183" cy="412" r="3" opacity="0.40">
+            <animate attributeName="opacity" values="0.2;0.55;0.2" dur="5s" repeatCount="indefinite" />
+        </circle>
+        <circle cx="466" cy="213" r="2.5" opacity="0.45">
+            <animate attributeName="opacity" values="0.2;0.6;0.2" dur="4.2s"
+                repeatCount="indefinite" />
+        </circle>
+        <circle cx="83" cy="330" r="2" opacity="0.35">
+            <animate attributeName="opacity" values="0.15;0.5;0.15" dur="4.7s"
+                repeatCount="indefinite" />
+        </circle>
+        <circle cx="340" cy="450" r="2.5" fill="#d4af37" opacity="0.45">
+            <animate attributeName="opacity" values="0.2;0.6;0.2" dur="3.5s"
+                repeatCount="indefinite" />
+        </circle>
+    </g>
+
+    <path d="M0 460 Q125 445 250 458 T500 448 V500 H0Z" fill="#c5cde8" opacity="0.45" />
+    <path d="M0 475 Q145 462 290 475 T500 466 V500 H0Z" fill="#aab5d9" opacity="0.50" />
+    <path d="M0 488 Q155 478 315 488 T500 480 V500 H0Z" fill="#8fa0cc" opacity="0.55" />
+</svg>

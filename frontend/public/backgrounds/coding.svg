@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400">
+        <defs>
+                <radialGradient id="bg" cx="50%" cy="50%" r="80%">
+                        <stop offset="0%" stop-color="#161b22" />
+                        <stop offset="60%" stop-color="#0d1117" />
+                        <stop offset="100%" stop-color="#05070a" />
+                </radialGradient>
+                <radialGradient id="glowCyan">
+                        <stop offset="0%" stop-color="#58a6ff" stop-opacity="0.35" />
+                        <stop offset="100%" stop-color="#58a6ff" stop-opacity="0" />
+                </radialGradient>
+                <radialGradient id="glowPurple">
+                        <stop offset="0%" stop-color="#bc8cff" stop-opacity="0.30" />
+                        <stop offset="100%" stop-color="#bc8cff" stop-opacity="0" />
+                </radialGradient>
+                <linearGradient id="codeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#58a6ff" />
+                        <stop offset="100%" stop-color="#7ee787" />
+                </linearGradient>
+        </defs>
+        <rect width="400" height="400" fill="url(#bg)" />
+        <circle cx="90" cy="90" r="120" fill="url(#glowCyan)" />
+        <circle cx="320" cy="280" r="140" fill="url(#glowPurple)" />
+
+        <g fill="url(#codeGrad)" fill-opacity="0.75" font-family="monospace" font-size="22">
+
+                <text x="20" y="40"> &lt;/&gt; <animate attributeName="y" values="40;30;40" dur="6s"
+                                repeatCount="indefinite" />
+      <animate attributeName="fill-opacity"
+                                values="0.3;0.6;0.3" dur="6s" repeatCount="indefinite" />
+                </text>
+                <text x="180" y="80"> {} <animate attributeName="y" values="80;92;80" dur="7s"
+                                repeatCount="indefinite" />
+      <animate attributeName="fill-opacity"
+                                values="0.3;0.65;0.3" dur="7s" repeatCount="indefinite" />
+                </text>
+                <text x="60" y="150"> [] <animate attributeName="y" values="150;138;150" dur="5.5s"
+                                repeatCount="indefinite" />
+      <animate attributeName="fill-opacity"
+                                values="0.25;0.6;0.25" dur="5.5s" repeatCount="indefinite" />
+                </text>
+                <text x="260" y="180"> () <animate attributeName="y" values="180;192;180" dur="6.5s"
+                                repeatCount="indefinite" />
+      <animate attributeName="fill-opacity"
+                                values="0.3;0.65;0.3" dur="6.5s" repeatCount="indefinite" />
+                </text>
+                <text x="120" y="250"> &lt;/&gt; <animate attributeName="y" values="250;240;250"
+                                dur="8s"
+                                repeatCount="indefinite" />
+      <animate attributeName="fill-opacity"
+                                values="0.3;0.6;0.3" dur="8s" repeatCount="indefinite" />
+                </text>
+                <text x="300" y="280"> ; <animate attributeName="y" values="280;292;280" dur="5s"
+                                repeatCount="indefinite" />
+      <animate attributeName="fill-opacity"
+                                values="0.25;0.55;0.25" dur="5s" repeatCount="indefinite" />
+                </text>
+                <text x="20" y="340"> # <animate attributeName="y" values="340;328;340" dur="6.8s"
+                                repeatCount="indefinite" />
+      <animate attributeName="fill-opacity"
+                                values="0.25;0.55;0.25" dur="6.8s" repeatCount="indefinite" />
+                </text>
+                <text x="220" y="360"> =&gt; <animate attributeName="y" values="360;350;360"
+                                dur="7.5s"
+                                repeatCount="indefinite" />
+      <animate attributeName="fill-opacity"
+                                values="0.25;0.6;0.25" dur="7.5s" repeatCount="indefinite" />
+                </text>
+                <text x="320" y="60"> &amp;&amp; <animate attributeName="y" values="60;72;60"
+                                dur="6.2s"
+                                repeatCount="indefinite" />
+      <animate attributeName="fill-opacity"
+                                values="0.25;0.55;0.25" dur="6.2s" repeatCount="indefinite" />
+                </text>
+                <text x="140" y="110"> // <animate attributeName="y" values="110;100;110" dur="5.8s"
+                                repeatCount="indefinite" />
+      <animate attributeName="fill-opacity"
+                                values="0.2;0.5;0.2" dur="5.8s" repeatCount="indefinite" />
+                </text>
+
+        </g>
+
+        <g stroke="#58a6ff" stroke-opacity="0.15" stroke-width="1.2" fill="none">
+                <path d="M0 200 H400">
+                        <animate attributeName="stroke-opacity" values="0.08;0.25;0.08" dur="4s"
+                                repeatCount="indefinite" />
+                </path>
+                <path d="M200 0 V400">
+                        <animate attributeName="stroke-opacity" values="0.08;0.25;0.08" dur="5s"
+                                repeatCount="indefinite" />
+                </path>
+        </g>
+
+        <g fill="#7ee787">
+                <circle cx="350" cy="120" r="2" />
+                <circle cx="40" cy="320" r="2" />
+                <circle cx="200" cy="220" r="2" />
+        </g>
+</svg>

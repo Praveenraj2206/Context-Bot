@@ -1,0 +1,205 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200">
+
+    <defs>
+        <radialGradient id="bgGradient" cx="50%" cy="40%" r="80%">
+            <stop offset="0%" stop-color="#fffdfd" />
+            <stop offset="40%" stop-color="#ffeaf2" />
+            <stop offset="100%" stop-color="#ffdce8" />
+        </radialGradient>
+
+        <radialGradient id="glowPink" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#ff2d75" stop-opacity="0.28" />
+            <stop offset="45%" stop-color="#ff5b98" stop-opacity="0.15" />
+            <stop offset="100%" stop-color="#ff2d75" stop-opacity="0" />
+        </radialGradient>
+
+        <radialGradient id="glowGold" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#ffd79a" stop-opacity="0.35" />
+            <stop offset="60%" stop-color="#ffebb9" stop-opacity="0.12" />
+            <stop offset="100%" stop-color="#ffd79a" stop-opacity="0" />
+        </radialGradient>
+
+        <linearGradient id="heartFill" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#ff2d75" stop-opacity="0.20" />
+            <stop offset="50%" stop-color="#ff5f98" stop-opacity="0.12" />
+            <stop offset="100%" stop-color="#ff8bb5" stop-opacity="0.05" />
+        </linearGradient>
+
+        <linearGradient id="heartStroke" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#ff2d75" />
+            <stop offset="100%" stop-color="#ff92b9" />
+        </linearGradient>
+
+        <radialGradient id="sparkleGlow">
+            <stop offset="0%" stop-color="#fffdf0" />
+            <stop offset="50%" stop-color="#ffd79a" />
+            <stop offset="100%" stop-color="#ff4d8d" />
+        </radialGradient>
+    </defs>
+
+    <rect width="1200" height="1200" fill="url(#bgGradient)" />
+
+    <!-- soft glows -->
+    <circle cx="180" cy="220" r="260" fill="url(#glowPink)">
+        <animate attributeName="r" values="240;280;240" dur="6s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="1020" cy="380" r="300" fill="url(#glowGold)">
+        <animate attributeName="r" values="280;330;280" dur="7s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="560" cy="940" r="320" fill="url(#glowPink)">
+        <animate attributeName="r" values="300;350;300" dur="8s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="980" cy="1020" r="220" fill="url(#glowGold)">
+        <animate attributeName="r" values="200;240;200" dur="5.5s" repeatCount="indefinite" />
+    </circle>
+
+    <!-- swirl lines -->
+    <g stroke="#ff2d75" stroke-opacity="0.16" stroke-width="1.5" fill="none">
+        <path d="M100 600 C 250 500, 350 700, 500 600 S 750 500, 900 600">
+            <animate attributeName="d"
+                values="M100 600 C 250 500, 350 700, 500 600 S 750 500, 900 600;M100 620 C 250 520, 350 720, 500 620 S 750 520, 900 620;M100 600 C 250 500, 350 700, 500 600 S 750 500, 900 600"
+                dur="12s" repeatCount="indefinite" />
+        </path>
+        <path d="M150 950 C 320 850, 420 1050, 600 950 S 880 850, 1050 950">
+            <animate attributeName="d"
+                values="M150 950 C 320 850, 420 1050, 600 950 S 880 850, 1050 950;M150 930 C 320 830, 420 1030, 600 930 S 880 830, 1050 930;M150 950 C 320 850, 420 1050, 600 950 S 880 850, 1050 950"
+                dur="14s" repeatCount="indefinite" />
+        </path>
+    </g>
+
+    <!-- floating hearts -->
+    <g fill="url(#heartFill)" stroke="url(#heartStroke)" stroke-opacity="0.45" stroke-width="1.5">
+        <g transform="translate(250 180)">
+            <g>
+                <animateTransform attributeName="transform" type="translate"
+                    values="0 0; 0 -25; 0 0" dur="6s" repeatCount="indefinite" />
+                <path
+                    d="M0 80 C0 0 120 0 120 80 C120 160 0 240 0 240 C0 240 -120 160 -120 80 C-120 0 0 0 0 80Z"
+                    transform="translate(0 -100) scale(0.55)" />
+            </g>
+        </g>
+
+        <g transform="translate(800 300)">
+            <g>
+                <animateTransform attributeName="transform" type="translate"
+                    values="0 0; 0 -30; 0 0" dur="7s" repeatCount="indefinite" />
+                <path
+                    d="M0 80 C0 0 120 0 120 80 C120 160 0 240 0 240 C0 240 -120 160 -120 80 C-120 0 0 0 0 80Z"
+                    transform="translate(0 -100) scale(0.6)" />
+            </g>
+        </g>
+
+        <g transform="translate(500 800)">
+            <g>
+                <animateTransform attributeName="transform" type="translate"
+                    values="0 0; 0 -28; 0 0" dur="6.5s" repeatCount="indefinite" />
+                <path
+                    d="M0 80 C0 0 120 0 120 80 C120 160 0 240 0 240 C0 240 -120 160 -120 80 C-120 0 0 0 0 80Z"
+                    transform="translate(0 -100) scale(0.55)" />
+            </g>
+        </g>
+
+        <g transform="translate(150 980)">
+            <g>
+                <animateTransform attributeName="transform" type="translate"
+                    values="0 0; 0 -20; 0 0" dur="5.5s" repeatCount="indefinite" />
+                <path
+                    d="M0 80 C0 0 120 0 120 80 C120 160 0 240 0 240 C0 240 -120 160 -120 80 C-120 0 0 0 0 80Z"
+                    transform="translate(0 -100) scale(0.4)" />
+            </g>
+        </g>
+
+        <g transform="translate(1050 850)">
+            <g>
+                <animateTransform attributeName="transform" type="translate"
+                    values="0 0; 0 -22; 0 0" dur="6.2s" repeatCount="indefinite" />
+                <path
+                    d="M0 80 C0 0 120 0 120 80 C120 160 0 240 0 240 C0 240 -120 160 -120 80 C-120 0 0 0 0 80Z"
+                    transform="translate(0 -100) scale(0.45)" />
+            </g>
+        </g>
+
+        <g transform="translate(950 100)">
+            <g>
+                <animateTransform attributeName="transform" type="translate"
+                    values="0 0; 0 -18; 0 0" dur="5s" repeatCount="indefinite" />
+                <path
+                    d="M0 80 C0 0 120 0 120 80 C120 160 0 240 0 240 C0 240 -120 160 -120 80 C-120 0 0 0 0 80Z"
+                    transform="translate(0 -100) scale(0.35)" />
+            </g>
+        </g>
+
+        <g transform="translate(80 450)">
+            <g>
+                <animateTransform attributeName="transform" type="translate"
+                    values="0 0; 0 -15; 0 0" dur="4.5s" repeatCount="indefinite" />
+                <path
+                    d="M0 80 C0 0 120 0 120 80 C120 160 0 240 0 240 C0 240 -120 160 -120 80 C-120 0 0 0 0 80Z"
+                    transform="translate(0 -100) scale(0.3)" />
+            </g>
+        </g>
+
+        <g transform="translate(700 1080)">
+            <g>
+                <animateTransform attributeName="transform" type="translate"
+                    values="0 0; 0 -24; 0 0" dur="6.8s" repeatCount="indefinite" />
+                <path
+                    d="M0 80 C0 0 120 0 120 80 C120 160 0 240 0 240 C0 240 -120 160 -120 80 C-120 0 0 0 0 80Z"
+                    transform="translate(0 -100) scale(0.5)" />
+            </g>
+        </g>
+    </g>
+
+    <!-- sparkles -->
+    <g fill="url(#sparkleGlow)">
+        <circle cx="320" cy="420" r="3" opacity="0.5">
+            <animate attributeName="opacity" values="0.2;0.8;0.2" dur="3s" repeatCount="indefinite" />
+        </circle>
+        <circle cx="700" cy="220" r="4" opacity="0.4">
+            <animate attributeName="opacity" values="0.2;0.7;0.2" dur="4s" repeatCount="indefinite" />
+        </circle>
+        <circle cx="950" cy="600" r="3" opacity="0.5">
+            <animate attributeName="opacity" values="0.2;0.8;0.2" dur="3.5s"
+                repeatCount="indefinite" />
+        </circle>
+        <circle cx="420" cy="950" r="3.5" opacity="0.45">
+            <animate attributeName="opacity" values="0.2;0.75;0.2" dur="4.2s"
+                repeatCount="indefinite" />
+        </circle>
+        <circle cx="1100" cy="450" r="3" opacity="0.5">
+            <animate attributeName="opacity" values="0.2;0.8;0.2" dur="3.2s"
+                repeatCount="indefinite" />
+        </circle>
+        <circle cx="200" cy="750" r="2.5" opacity="0.4">
+            <animate attributeName="opacity" values="0.15;0.65;0.15" dur="3.8s"
+                repeatCount="indefinite" />
+        </circle>
+        <circle cx="850" cy="1100" r="3" opacity="0.45">
+            <animate attributeName="opacity" values="0.2;0.7;0.2" dur="4.5s"
+                repeatCount="indefinite" />
+        </circle>
+        <circle cx="60" cy="100" r="2.5" opacity="0.4">
+            <animate attributeName="opacity" values="0.15;0.6;0.15" dur="3.6s"
+                repeatCount="indefinite" />
+        </circle>
+    </g>
+
+    <!-- original hearts, gently pulsing -->
+    <g fill="url(#heartFill)" fill-opacity="1">
+        <path
+            d="M250 180 C250 100 370 100 370 180 C370 260 250 340 250 340 C250 340 130 260 130 180 C130 100 250 100 250 180Z">
+            <animateTransform attributeName="transform" type="scale" values="1;1.04;1" dur="5s"
+                repeatCount="indefinite" additive="sum" />
+        </path>
+        <path
+            d="M800 300 C800 220 920 220 920 300 C920 380 800 460 800 460 C800 460 680 380 680 300 C680 220 800 220 800 300Z">
+            <animateTransform attributeName="transform" type="scale" values="1;1.05;1" dur="6s"
+                repeatCount="indefinite" additive="sum" />
+        </path>
+        <path
+            d="M500 800 C500 720 620 720 620 800 C620 880 500 960 500 960 C500 960 380 880 380 800 C380 720 500 720 500 800Z">
+            <animateTransform attributeName="transform" type="scale" values="1;1.05;1" dur="5.5s"
+                repeatCount="indefinite" additive="sum" />
+        </path>
+    </g>
+</svg>

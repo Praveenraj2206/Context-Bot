@@ -1,0 +1,274 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200">
+    <defs>
+        <radialGradient id="glowGreen" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#4f7942" stop-opacity="0.16" />
+            <stop offset="100%" stop-color="#4f7942" stop-opacity="0" />
+        </radialGradient>
+        <radialGradient id="glowLight" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#eef5e6" stop-opacity="0.5" />
+            <stop offset="100%" stop-color="#eef5e6" stop-opacity="0" />
+        </radialGradient>
+        <linearGradient id="canopyDark" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#5a8a4a" />
+            <stop offset="100%" stop-color="#3f6b35" />
+        </linearGradient>
+        <linearGradient id="canopyMid" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#74a85f" />
+            <stop offset="100%" stop-color="#528144" />
+        </linearGradient>
+        <linearGradient id="canopyLight" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#8fbf78" />
+            <stop offset="100%" stop-color="#6a9c56" />
+        </linearGradient>
+        <linearGradient id="trunkGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#8a6f50" />
+            <stop offset="100%" stop-color="#5e4a35" />
+        </linearGradient>
+    </defs>
+
+    <rect width="1200" height="1200" fill="#f3f7ee" />
+
+    <circle cx="200" cy="220" r="320" fill="url(#glowGreen)">
+        <animate attributeName="r" values="300;340;300" dur="9s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="1020" cy="380" r="340" fill="url(#glowLight)">
+        <animate attributeName="r" values="320;360;320" dur="10s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="560" cy="1000" r="360" fill="url(#glowGreen)">
+        <animate attributeName="r" values="340;380;340" dur="11s" repeatCount="indefinite" />
+    </circle>
+
+    <path d="M0 1020 Q300 970 600 1010 T1200 990 V1200 H0 Z" fill="#c9dcb8" opacity="0.5" />
+    <path d="M0 1080 Q350 1040 700 1080 T1200 1060 V1200 H0 Z" fill="#aacb8e" opacity="0.55" />
+    <path d="M0 1140 Q380 1110 760 1140 T1200 1120 V1200 H0 Z" fill="#8fbf78" opacity="0.6" />
+
+    <!-- large left tree -->
+    <g transform="translate(230 240)">
+        <g>
+            <animateTransform attributeName="transform" type="rotate" values="-1 0 0;1 0 0;-1 0 0"
+                dur="11s" repeatCount="indefinite" />
+            <path d="M0 760 C-6 600 4 420 0 280" stroke="url(#trunkGrad)" stroke-width="26"
+                fill="none" stroke-linecap="round" />
+            <path d="M-4 460 C-80 420 -130 340 -110 260" stroke="url(#trunkGrad)" stroke-width="14"
+                fill="none" stroke-linecap="round" />
+            <path d="M4 400 C90 360 140 270 110 190" stroke="url(#trunkGrad)" stroke-width="14"
+                fill="none" stroke-linecap="round" />
+            <ellipse cx="0" cy="170" rx="230" ry="190" fill="url(#canopyDark)" />
+            <ellipse cx="-150" cy="260" rx="160" ry="135" fill="url(#canopyMid)" />
+            <ellipse cx="155" cy="240" rx="170" ry="140" fill="url(#canopyMid)" />
+            <ellipse cx="10" cy="60" rx="150" ry="120" fill="url(#canopyLight)" />
+            <ellipse cx="-80" cy="110" rx="110" ry="90" fill="url(#canopyLight)" opacity="0.85" />
+            <ellipse cx="100" cy="120" rx="100" ry="85" fill="url(#canopyDark)" opacity="0.85" />
+        </g>
+    </g>
+
+    <!-- mid right tree -->
+    <g transform="translate(940 460)">
+        <g>
+            <animateTransform attributeName="transform" type="rotate" values="1 0 0;-1 0 0;1 0 0"
+                dur="12s" repeatCount="indefinite" />
+            <path d="M0 540 C-4 430 3 320 0 220" stroke="url(#trunkGrad)" stroke-width="18"
+                fill="none" stroke-linecap="round" />
+            <path d="M3 320 C75 295 105 230 85 175" stroke="url(#trunkGrad)" stroke-width="10"
+                fill="none" stroke-linecap="round" />
+            <path d="M-3 280 C-65 255 -90 195 -70 145" stroke="url(#trunkGrad)" stroke-width="10"
+                fill="none" stroke-linecap="round" />
+            <ellipse cx="0" cy="130" rx="190" ry="155" fill="url(#canopyMid)" />
+            <ellipse cx="120" cy="200" rx="135" ry="110" fill="url(#canopyDark)" />
+            <ellipse cx="-125" cy="190" rx="140" ry="115" fill="url(#canopyDark)" />
+            <ellipse cx="0" cy="60" rx="120" ry="95" fill="url(#canopyLight)" />
+        </g>
+    </g>
+
+    <!-- small center tree -->
+    <g transform="translate(640 220)">
+        <g>
+            <animateTransform attributeName="transform" type="rotate"
+                values="-1.3 0 0;1.3 0 0;-1.3 0 0" dur="10s" repeatCount="indefinite" />
+            <path d="M0 340 C-3 270 2 200 0 130" stroke="url(#trunkGrad)" stroke-width="11"
+                fill="none" stroke-linecap="round" />
+            <ellipse cx="0" cy="100" rx="125" ry="100" fill="url(#canopyMid)" opacity="0.85" />
+            <ellipse cx="78" cy="155" rx="88" ry="72" fill="url(#canopyDark)" opacity="0.85" />
+            <ellipse cx="-78" cy="150" rx="92" ry="75" fill="url(#canopyLight)" opacity="0.85" />
+        </g>
+    </g>
+
+    <!-- bushes -->
+    <g>
+        <g transform="translate(140 1010)">
+            <g>
+                <animateTransform attributeName="transform" type="translate" values="0 0;0 -6;0 0"
+                    dur="6s" repeatCount="indefinite" />
+                <ellipse cx="0" cy="0" rx="100" ry="65" fill="url(#canopyMid)" />
+                <ellipse cx="75" cy="18" rx="70" ry="48" fill="url(#canopyDark)" />
+                <ellipse cx="-60" cy="20" rx="65" ry="44" fill="url(#canopyLight)" />
+            </g>
+        </g>
+        <g transform="translate(1080 1030)">
+            <g>
+                <animateTransform attributeName="transform" type="translate" values="0 0;0 -7;0 0"
+                    dur="7s" repeatCount="indefinite" />
+                <ellipse cx="0" cy="0" rx="110" ry="70" fill="url(#canopyDark)" />
+                <ellipse cx="-80" cy="20" rx="75" ry="50" fill="url(#canopyMid)" />
+                <ellipse cx="70" cy="22" rx="68" ry="46" fill="url(#canopyLight)" />
+            </g>
+        </g>
+        <g transform="translate(480 1090)">
+            <g>
+                <animateTransform attributeName="transform" type="translate" values="0 0;0 -5;0 0"
+                    dur="5.5s" repeatCount="indefinite" />
+                <ellipse cx="0" cy="0" rx="85" ry="56" fill="url(#canopyLight)" />
+                <ellipse cx="65" cy="14" rx="58" ry="40" fill="url(#canopyMid)" />
+            </g>
+        </g>
+    </g>
+
+    <!-- swaying grasses -->
+    <g stroke-linecap="round" fill="none">
+        <g transform="translate(330 1060)">
+            <g>
+                <animateTransform attributeName="transform" type="rotate"
+                    values="-5 0 0;5 0 0;-5 0 0" dur="5s" repeatCount="indefinite" />
+                <path d="M0 0 C-10 -50 -6 -95 0 -135" stroke="#3f6b35" stroke-width="4" />
+                <path d="M0 -65 C-40 -78 -58 -110 -50 -135" stroke="#5d8f4a" stroke-width="3" />
+                <path d="M0 -65 C40 -78 58 -110 50 -135" stroke="#5d8f4a" stroke-width="3" />
+                <path d="M0 -40 C-22 -52 -33 -75 -27 -95" stroke="#74a85f" stroke-width="2.5" />
+            </g>
+        </g>
+        <g transform="translate(860 1080)">
+            <g>
+                <animateTransform attributeName="transform" type="rotate"
+                    values="5 0 0;-5 0 0;5 0 0" dur="6s" repeatCount="indefinite" />
+                <path d="M0 0 C8 -45 4 -85 0 -120" stroke="#52814a" stroke-width="3.5" />
+                <path d="M0 -55 C34 -65 50 -93 43 -116" stroke="#8fbf78" stroke-width="2.5" />
+                <path d="M0 -55 C-34 -65 -50 -93 -43 -116" stroke="#8fbf78" stroke-width="2.5" />
+            </g>
+        </g>
+        <g transform="translate(220 1140)">
+            <g>
+                <animateTransform attributeName="transform" type="rotate"
+                    values="-4 0 0;4 0 0;-4 0 0" dur="4.5s" repeatCount="indefinite" />
+                <path d="M0 0 C-6 -35 -3 -65 0 -95" stroke="#5d8f4a" stroke-width="3" />
+                <path d="M0 -45 C-25 -55 -38 -78 -32 -98" stroke="#74a85f" stroke-width="2" />
+                <path d="M0 -45 C25 -55 38 -78 32 -98" stroke="#74a85f" stroke-width="2" />
+            </g>
+        </g>
+    </g>
+
+    <!-- flowers -->
+    <g>
+        <g transform="translate(280 1130)">
+            <g>
+                <animateTransform attributeName="transform" type="translate" values="0 0;0 -6;0 0"
+                    dur="5s" repeatCount="indefinite" />
+                <path d="M0 0 L-2 70" stroke="#3f6b35" stroke-width="3" fill="none" />
+                <g transform="translate(0 -4)">
+                    <ellipse cx="0" cy="-12" rx="9" ry="13" fill="#f4f1e6" />
+                    <ellipse cx="11" cy="-3" rx="9" ry="13" fill="#f4f1e6"
+                        transform="rotate(72 11 -3)" />
+                    <ellipse cx="7" cy="10" rx="9" ry="13" fill="#f4f1e6"
+                        transform="rotate(144 7 10)" />
+                    <ellipse cx="-7" cy="10" rx="9" ry="13" fill="#f4f1e6"
+                        transform="rotate(216 -7 10)" />
+                    <ellipse cx="-11" cy="-3" rx="9" ry="13" fill="#f4f1e6"
+                        transform="rotate(288 -11 -3)" />
+                    <circle cx="0" cy="0" r="6" fill="#d9b54a" />
+                </g>
+            </g>
+        </g>
+        <g transform="translate(720 1160)">
+            <g>
+                <animateTransform attributeName="transform" type="translate" values="0 0;0 -7;0 0"
+                    dur="5.5s" repeatCount="indefinite" />
+                <path d="M0 0 L2 60" stroke="#52814a" stroke-width="2.5" fill="none" />
+                <g transform="translate(0 -3)">
+                    <ellipse cx="0" cy="-10" rx="7" ry="11" fill="#fce8ee" />
+                    <ellipse cx="9" cy="-2" rx="7" ry="11" fill="#fce8ee"
+                        transform="rotate(72 9 -2)" />
+                    <ellipse cx="6" cy="8" rx="7" ry="11" fill="#fce8ee" transform="rotate(144 6 8)" />
+                    <ellipse cx="-6" cy="8" rx="7" ry="11" fill="#fce8ee"
+                        transform="rotate(216 -6 8)" />
+                    <ellipse cx="-9" cy="-2" rx="7" ry="11" fill="#fce8ee"
+                        transform="rotate(288 -9 -2)" />
+                    <circle cx="0" cy="0" r="5" fill="#e7a23c" />
+                </g>
+            </g>
+        </g>
+        <g transform="translate(1010 1110)">
+            <g>
+                <animateTransform attributeName="transform" type="translate" values="0 0;0 -5;0 0"
+                    dur="4.8s" repeatCount="indefinite" />
+                <path d="M0 0 L-1 50" stroke="#3f6b35" stroke-width="2.5" fill="none" />
+                <g transform="translate(0 -3)">
+                    <ellipse cx="0" cy="-9" rx="6" ry="10" fill="#fdf2c4" />
+                    <ellipse cx="8" cy="-2" rx="6" ry="10" fill="#fdf2c4"
+                        transform="rotate(72 8 -2)" />
+                    <ellipse cx="5" cy="7" rx="6" ry="10" fill="#fdf2c4" transform="rotate(144 5 7)" />
+                    <ellipse cx="-5" cy="7" rx="6" ry="10" fill="#fdf2c4"
+                        transform="rotate(216 -5 7)" />
+                    <ellipse cx="-8" cy="-2" rx="6" ry="10" fill="#fdf2c4"
+                        transform="rotate(288 -8 -2)" />
+                    <circle cx="0" cy="0" r="4" fill="#c98a3c" />
+                </g>
+            </g>
+        </g>
+    </g>
+
+    <!-- floating leaves -->
+    <g stroke="#5d8f4a" stroke-width="1">
+        <g transform="translate(980 760)">
+            <g>
+                <animateTransform attributeName="transform" type="translate"
+                    values="0 0;-25 -35;0 0" dur="13s" repeatCount="indefinite" />
+                <path d="M0 0 C22 -28 66 -28 88 0 C66 28 22 28 0 0Z" fill="#74a85f" />
+                <path d="M0 0 L88 0" stroke="#3f6b35" stroke-width="1" fill="none" />
+            </g>
+        </g>
+        <g transform="translate(300 600)">
+            <g>
+                <animateTransform attributeName="transform" type="translate" values="0 0;28 -28;0 0"
+                    dur="15s" repeatCount="indefinite" />
+                <path d="M0 0 C18 -22 54 -22 72 0 C54 22 18 22 0 0Z" fill="#8fbf78"
+                    transform="scale(0.8)" />
+                <path d="M0 0 L72 0" stroke="#52814a" stroke-width="1" fill="none"
+                    transform="scale(0.8)" />
+            </g>
+        </g>
+        <g transform="translate(1080 980)">
+            <g>
+                <animateTransform attributeName="transform" type="translate"
+                    values="0 0;-20 -25;0 0" dur="12s" repeatCount="indefinite" />
+                <path d="M0 0 C18 -22 54 -22 72 0 C54 22 18 22 0 0Z" fill="#5d8f4a"
+                    transform="scale(0.65)" />
+                <path d="M0 0 L72 0" stroke="#3f6b35" stroke-width="1" fill="none"
+                    transform="scale(0.65)" />
+            </g>
+        </g>
+    </g>
+
+    <!-- particle dots -->
+    <g fill="#5d8f4a">
+        <circle cx="380" cy="430" r="3" opacity="0.45">
+            <animate attributeName="opacity" values="0.2;0.55;0.2" dur="4s" repeatCount="indefinite" />
+        </circle>
+        <circle cx="760" cy="260" r="3.5" opacity="0.4">
+            <animate attributeName="opacity" values="0.2;0.5;0.2" dur="4.5s"
+                repeatCount="indefinite" />
+        </circle>
+        <circle cx="980" cy="660" r="3" opacity="0.45">
+            <animate attributeName="opacity" values="0.2;0.55;0.2" dur="3.8s"
+                repeatCount="indefinite" />
+        </circle>
+        <circle cx="440" cy="1000" r="3.5" opacity="0.4">
+            <animate attributeName="opacity" values="0.2;0.5;0.2" dur="5s" repeatCount="indefinite" />
+        </circle>
+        <circle cx="1120" cy="520" r="3" opacity="0.45">
+            <animate attributeName="opacity" values="0.2;0.55;0.2" dur="4.2s"
+                repeatCount="indefinite" />
+        </circle>
+        <circle cx="200" cy="800" r="2.5" opacity="0.35">
+            <animate attributeName="opacity" values="0.15;0.45;0.15" dur="4.7s"
+                repeatCount="indefinite" />
+        </circle>
+    </g>
+</svg>
