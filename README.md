@@ -65,3 +65,4 @@ npm run dev
 - **MongoDB Atlas**: Free cluster at mongodb.com/atlas
 - **Gemini API**: Free at aistudio.google.com
 - **JWT Secret**: Any random long string
+# Context-Bot
