@@ -84,6 +84,7 @@ export default function Chat() {
   const [activeSessionId, setActiveSessionId] = useState(null);
   const [editingSession, setEditingSession] = useState(null);
   const [newTitle, setNewTitle] = useState("");
+  const [menuOpen, setMenuOpen] = useState(null);
 
   const [input, setInput] = useState("");
   const [context, setContext] = useState("generic");
@@ -271,7 +272,7 @@ export default function Chat() {
               {sessions.map((session) => (
                 <div
                   key={session._id}
-                  className="rounded-xl border transition-all duration-300 overflow-hidden"
+                  className="relative rounded-xl border transition-all duration-300"
                   style={
                     activeSessionId === session._id
                       ? {
@@ -287,25 +288,108 @@ export default function Chat() {
                 >
                   <div
                     onClick={() => loadHistory(session._id)}
-                    className="cursor-pointer p-3"
+                    className="cursor-pointer p-2"
                   >
                     {editingSession === session._id ? (
-                      <input
-                        value={newTitle}
-                        onChange={(e) => setNewTitle(e.target.value)}
-                        className="w-full bg-slate-900 border border-slate-700 rounded px-2 py-1 text-sm"
-                      />
+                      <div className="flex items-center gap-2">
+                        <input
+                          value={newTitle}
+                          onChange={(e) => setNewTitle(e.target.value)}
+                          className="flex-1 bg-slate-900 border border-slate-700 rounded px-2 py-1 text-sm"
+                        />
+
+                        <button
+                          onClick={async () => {
+                            try {
+                              await api.put(`/sessions/${session._id}/rename`, {
+                                title: newTitle,
+                              });
+
+                              setEditingSession(null);
+                              setMenuOpen(null);
+                              loadSessions();
+                            } catch (err) {
+                              console.error(err);
+                            }
+                          }}
+                          className="text-green-400 hover:text-green-300"
+                        >
+                          💾
+                        </button>
+
+                        <button
+                          onClick={() => {
+                            setEditingSession(null);
+                          }}
+                          className="text-red-400 hover:text-red-300"
+                        >
+                          ✕
+                        </button>
+                      </div>
                     ) : (
-                      <div className="truncate font-semibold text-white">
-                        {session.title}
+                      <div className="flex items-center justify-between">
+                        {menuOpen === session._id && (
+                          <div
+                            className="absolute right-0 top-8 z-[9999] w-32 rounded-lg border shadow-xl"
+                            style={{
+                              backgroundColor: "#161b22",
+                              borderColor: "#30363d",
+                            }}
+                          >
+                            <button
+                              onClick={() => {
+                                setEditingSession(session._id);
+                                setNewTitle(session.title);
+                                setMenuOpen(null);
+                              }}
+                              className="block w-full px-4 py-2 text-left text-sm hover:bg-slate-800"
+                            >
+                              ✏ Rename
+                            </button>
+
+                            <button
+                              onClick={async () => {
+                                try {
+                                  await api.delete(`/sessions/${session._id}`);
+
+                                  if (activeSessionId === session._id) {
+                                    setMessages([]);
+                                    setActiveSessionId(null);
+                                  }
+
+                                  loadSessions();
+                                } catch (err) {
+                                  console.error(err);
+                                }
+                              }}
+                              className="block w-full px-4 py-2 text-left text-sm text-red-400 hover:bg-slate-800"
+                            >
+                              🗑 Delete
+                            </button>
+                          </div>
+                        )}
+                        <div className="truncate font-medium text-sm text-white">
+                          {session.title}
+                        </div>
+
+                        {editingSession !== session._id && (
+                          <button
+                            onClick={(e) => {
+                              e.stopPropagation();
+
+                              setMenuOpen(
+                                menuOpen === session._id ? null : session._id,
+                              );
+                            }}
+                            className="text-slate-400 hover:text-white px-1"
+                          >
+                            ⋮
+                          </button>
+                        )}
                       </div>
                     )}
 
-                    <div className="text-xs text-slate-400 mt-1">
-                      {session.context}
-                    </div>
-
-                    <div className="text-[10px] text-slate-500 mt-1">
+                    <div className="text-[10px] text-slate-500">
                       {formatDate(session.updated_at)}
                     </div>
 
@@ -320,60 +404,6 @@ export default function Chat() {
                         ACTIVE
                       </div>
                     )}
-                  </div>
-
-                  <div className="border-t border-slate-700 flex">
-                    {editingSession === session._id ? (
-                      <button
-                        onClick={async () => {
-                          try {
-                            await api.put(`/sessions/${session._id}/rename`, {
-                              title: newTitle,
-                            });
-
-                            setEditingSession(null);
-                            loadSessions();
-                          } catch (err) {
-                            console.error(err);
-                          }
-                        }}
-                        className="flex-1 py-2 text-xs text-green-400 hover:text-green-300"
-                      >
-                        💾 Save
-                      </button>
-                    ) : (
-                      <button
-                        onClick={() => {
-                          setEditingSession(session._id);
-                          setNewTitle(session.title);
-                        }}
-                        className="flex-1 py-2 text-xs text-blue-400 hover:text-blue-300"
-                      >
-                        ✏ Rename
-                      </button>
-                    )}
-
-                    <button
-                      onClick={async (e) => {
-                        e.stopPropagation();
-
-                        try {
-                          await api.delete(`/sessions/${session._id}`);
-
-                          if (activeSessionId === session._id) {
-                            setMessages([]);
-                            setActiveSessionId(null);
-                          }
-
-                          loadSessions();
-                        } catch (err) {
-                          console.error(err);
-                        }
-                      }}
-                      className="flex-1 py-2 text-xs text-red-400 hover:text-red-300 border-l border-slate-700"
-                    >
-                      🗑 Delete
-                    </button>
                   </div>
                 </div>
               ))}
@@ -479,7 +509,7 @@ export default function Chat() {
                 </h2>
 
                 <p className="text-slate-400">
-                  Start a conversation and your chat history will be saved
+                  Start conversation and your chat history will be saved
                   automatically in the sidebar.
                 </p>
 
