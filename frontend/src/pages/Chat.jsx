@@ -90,7 +90,6 @@ export default function Chat() {
   const [context, setContext] = useState("generic");
   const [loading, setLoading] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(true);
-
   const bottomRef = useRef(null);
   const navigate = useNavigate();
 
@@ -216,6 +215,7 @@ export default function Chat() {
     setMessages([]);
     setActiveSessionId(null);
   };
+
 
   return (
     <div
@@ -549,18 +549,21 @@ export default function Chat() {
             onChange={(e) => setInput(e.target.value)}
             onKeyDown={handleKeyDown}
             placeholder={`Ask your ${context} assistant...`}
-            className="flex-1 bg-brand-dark border border-slate-700 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-brand-accent"
+            className="flex-1 bg-brand-dark border border-slate-700 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none"
+            style={{
+              borderColor: theme.accent,
+            }}
           />
 
           <button
             onClick={sendMessage}
             disabled={loading}
-            className="disabled:opacity-50 text-white px-5 py-3 rounded-xl font-display font-semibold"
+            className="text-white px-5 py-3 rounded-xl font-semibold disabled:opacity-50"
             style={{
               backgroundColor: theme.accent,
             }}
           >
-            Send
+            ➤
           </button>
         </div>
       </div>

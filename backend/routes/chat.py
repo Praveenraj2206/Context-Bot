@@ -9,7 +9,7 @@ from models.chat import (
     generate_title
 )
 import os
-
+from utils.murf import generate_speech
 from utils.gemini import (
     detect_mood,
     generate_reply
@@ -212,4 +212,31 @@ def rename_session(session_id):
 
     return jsonify({
         "message": "Session renamed"
+    }), 200
+    
+    
+    
+@chat_bp.route("/tts", methods=["POST"])
+@jwt_required()
+def text_to_speech():
+
+    data = request.get_json()
+
+    text = data.get("text", "").strip()
+    context = data.get("context", "generic")
+
+    if not text:
+        return jsonify({
+            "error": "Text required"
+        }), 400
+
+    audio_url = generate_speech(text, context)
+
+    if not audio_url:
+        return jsonify({
+            "error": "Failed to generate speech"
+        }), 500
+
+    return jsonify({
+        "audio_url": audio_url
     }), 200
