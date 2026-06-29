@@ -1,41 +1,34 @@
 # ContextBot – Mood-Based Context-Aware AI Conversational Assistant
-
 > A full-stack AI chatbot that adapts responses based on user-selected context, supports authentication, stores conversation history, and provides AI-powered voice responses.
 
 ## Live Demo
-
 Demo URL:
-
 `https://context-bot-eight.vercel.app`
 
 ## Demo Video
 
-![](https://github.com/Praveenraj2206/Praveenraj2206/blob/main/my-folder/ContextBot.mp4)
+[![ContextBot Demo](https://raw.githubusercontent.com/Praveenraj2206/Praveenraj2206/main/my-folder/Home.png)](https://drive.google.com/file/d/1f_3fqbD5JvJttz79E3rmSQuNvDnW8xCY/view?usp=drivesdk)
+
+> 🎬 [**Click here to watch the demo video**](https://drive.google.com/file/d/1f_3fqbD5JvJttz79E3rmSQuNvDnW8xCY/view?usp=drivesdk)
 
 ## Screenshots
 
 Home
-
 ![](https://raw.githubusercontent.com/Praveenraj2206/Praveenraj2206/main/my-folder/Home.png)
 
 Sign Up
-
 ![](https://raw.githubusercontent.com/Praveenraj2206/Praveenraj2206/main/my-folder/SignUp.png)
 
 Themes
-
 ![](https://raw.githubusercontent.com/Praveenraj2206/Praveenraj2206/main/my-folder/Themes.png)
 
 Generic Chat
-
 ![](https://raw.githubusercontent.com/Praveenraj2206/Praveenraj2206/main/my-folder/GenericChat.png)
 
 Theme Chat
-
 ![](https://raw.githubusercontent.com/Praveenraj2206/Praveenraj2206/main/my-folder/ThemeChat.png)
 
 ## Features
-
 - JWT Authentication
 - Context-aware AI conversations
 - Multiple chat themes
@@ -48,7 +41,6 @@ Theme Chat
 - Cloud deployment with Render and Vercel
 
 ## Architecture
-
 ```text
 User
   │
@@ -70,7 +62,6 @@ AI Reply    Chat History
 ```
 
 ## Project Structure
-
 ```text
 mood-chatbot/
 ├── backend/
@@ -89,21 +80,14 @@ mood-chatbot/
 ```
 
 ## Tech Stack
-
 Frontend: React (Vite), Axios
-
 Backend: Flask, Flask-JWT-Extended, Flask-CORS
-
 Database: MongoDB Atlas
-
 AI: Groq
-
 Voice: Murf
-
 Deployment: Render + Vercel
 
 ## Environment Variables
-
 ```env
 MONGO_URI=
 JWT_SECRET_KEY=
@@ -114,7 +98,6 @@ MURF_API_KEY=
 ## Running Locally
 
 Backend
-
 ```bash
 cd backend
 python -m venv venv
@@ -124,7 +107,6 @@ python app.py
 ```
 
 Frontend
-
 ```bash
 cd frontend
 npm install
@@ -132,7 +114,6 @@ npm run dev
 ```
 
 ## Forking
-
 1. Fork this repository.
 2. Configure your own API keys.
 3. Configure MongoDB Atlas.
@@ -140,7 +121,6 @@ npm run dev
 5. Deploy your own copy.
 
 ## Future Improvements
-
 - Gunicorn
 - Docker
 - Rate limiting
@@ -149,13 +129,8 @@ npm run dev
 - Analytics
 
 ## Author
-
-Praveen Raj
-
-GitHub:
-
-`https://github.com/Praveenraj2206`
+Praveen Raj  
+GitHub: `https://github.com/Praveenraj2206`
 
 ## License
-
 Educational and portfolio use.
