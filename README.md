@@ -10,7 +10,7 @@ Demo URL:
 
 ## Demo Video
 
-`https://github.com/Praveenraj2206/Praveenraj2206/blob/main/my-folder/ContextBot.mp4`
+![](https://github.com/Praveenraj2206/Praveenraj2206/blob/main/my-folder/ContextBot.mp4)
 
 ## Screenshots
 
