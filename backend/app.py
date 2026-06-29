@@ -11,7 +11,7 @@ load_dotenv()
 app = Flask(__name__)
 app.config["JWT_SECRET_KEY"] = Config.JWT_SECRET_KEY
 
-CORS(app, resources={r"/api/*": {"origins": "http://localhost:5173"}})
+CORS(app)
 JWTManager(app)
 
 app.register_blueprint(auth_bp, url_prefix="/api/auth")
