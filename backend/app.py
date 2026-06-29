@@ -5,6 +5,7 @@ from dotenv import load_dotenv
 from config import Config
 from routes.auth import auth_bp
 from routes.chat import chat_bp
+import os
 
 load_dotenv()
 
@@ -18,4 +19,5 @@ app.register_blueprint(auth_bp, url_prefix="/api/auth")
 app.register_blueprint(chat_bp, url_prefix="/api")
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port, debug=True)
