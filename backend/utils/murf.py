@@ -6,13 +6,13 @@ client = Murf(
 )
 
 VOICE_MAP = {
-    "generic": "Tyler",
+    "generic": "Molly",        # was Tyler
     "love": "Ivy",
     "mentor": "Daisy",
-    "coding": "Rory",
-    "math": "Leyton",
-    "robotics": "Atlas",   # Change to Matthew if Atlas isn't available
-    "environment": "Hazel",
+    "coding": "Ezekiel",       # was Rory
+    "math": "Gordon",          # was Leyton
+    "robotics": "Matthew",     # or Atlas if Matthew isn't available
+    "environment": "Hazel",    # if Hazel is unavailable, replace with another available voice
 }
 
 def generate_speech(text, context="generic"):

@@ -68,7 +68,7 @@ body {
 }
 
 .bg-robotics {
-  animation: rotateSlow 60s linear infinite;
+  animation: none;
 }
 
 .bg-coding {

@@ -10,7 +10,7 @@ from models.chat import (
 )
 import os
 from utils.murf import generate_speech
-from utils.gemini import (
+from utils.groq import (
     detect_mood,
     generate_reply
 )
@@ -172,6 +172,33 @@ def chat():
         "session_id": session_id
     }), 200
 
+@chat_bp.route("/guest-chat", methods=["POST"])
+def guest_chat():
+    data = request.get_json()
+
+    user_message = data.get("message", "").strip()
+    context = data.get("context", "generic")
+
+    if not user_message:
+        return jsonify({
+            "error": "Message is required"
+        }), 400
+
+    mood = detect_mood(user_message)
+
+    reply = generate_reply(
+        user_message=user_message,
+        mood=mood,
+        context=context,
+        chat_history=[]
+    )
+
+    return jsonify({
+        "reply": reply,
+        "mood": mood,
+        "context": context
+    }), 200
+
 
 @chat_bp.route("/sessions/<session_id>", methods=["DELETE"])
 @jwt_required()
@@ -234,8 +261,8 @@ def text_to_speech():
 
     if not audio_url:
         return jsonify({
-            "error": "Failed to generate speech"
-        }), 500
+            "error": "Voice generation is temporarily unavailable."
+        }), 503
 
     return jsonify({
         "audio_url": audio_url
